@@ -7,9 +7,11 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <Route>
-    <App />
-  </Route>,
+  <React.StrictMode>
+    <Route>
+      <App />
+    </Route>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
