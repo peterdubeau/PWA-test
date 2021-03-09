@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Mouse",
+    "size": "tiny",
+    "hitDice": "1d6",
+    "imageUrl": "",
+    "notes": "A common mouse. Not really a big deal"
+  },{
+    "name": "Termite",
+    "size": "Super Tiny",
+    "hitDice": "1d1",
+    "imageUrl": "",
+    "notes": "They're small, but where there's one there's usually a LOT more. Beware of warms"
+  },{
+    "name": "Cockroach",
+    "size": "Super Tiny",
+    "hitDice": "1d2",
+    "imageUrl": "",
+    "notes": "Nukes Ineffective"
+  },{
+    "name": "BugBear",
+    "size": "Large",
+    "hitDice": "3d8",
+    "imageUrl": "",
+    "notes": "What the hell, get the fuck out"
+  }
+]

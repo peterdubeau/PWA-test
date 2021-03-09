@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
+import pests from '../../pests.json'
 
 export default function Forms() {
   const [formData, setFormData] = useState({
@@ -11,15 +12,22 @@ export default function Forms() {
   })
 
   const handleChange = (e) => {
+    e.preventDefault()
     const { name, value } = e.currentTarget;
-    console.log(value)
     setFormData({ ...formData, [name]: value })
+  }
+
+  const handleSearch = (e) => {
+    const { name, value } = e.currentTarget;
+    setFormData({ ...formData, [name]: value })
+    return pests.find(item => pests.name === item)
+    
+  }
+
+  const handleSubmit = (e) => {
     e.preventDefault()
   }
 
-  const handleSubmit = () => {
-
-  }
 
   return (
     <form>
@@ -36,8 +44,14 @@ export default function Forms() {
           value={formData.clientLastName}
           onChange={handleChange}
         />
+        <p>Pest:</p><input
+          type="text"
+          name="pest"
+          value={formData.pest}
+          onChange={handleSearch}
+        />
         <br />
-      <button onClick>Submit</button>
+      <button onClick ={handleSubmit}>Submit</button>
       </label>
     </form>
   )
