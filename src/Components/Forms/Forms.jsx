@@ -38,6 +38,7 @@ export default function Forms() {
   const loadPest = (input) => (e) => {
     let result = pests.filter(pest => pest.name === input)
     setPest(...result)
+    setQuery('')
   }
 
   const findPest = (e) => {
@@ -81,7 +82,7 @@ export default function Forms() {
           <p onClick={loadPest(item)}>{item}</p>
           )}
         <br />
-        <button>Submit</button>
+        {/* <button>Submit</button> */}
       </label>
     </form>
 
