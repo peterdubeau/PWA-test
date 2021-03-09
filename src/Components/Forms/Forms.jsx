@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import pests from '../../pests.json'
 
 export default function Forms() {
@@ -7,9 +7,13 @@ export default function Forms() {
     clientLastName: '',
     email: '',
     phone: '',
-    additionalNotes: '',
-    pest: ''
+    additionalNotes: ''
   })
+
+  const [pest, setPest] = useState('')
+
+  const [query, setQuery] = useState('')
+  const [queryResults, setQueryResults] = useState([])
 
   const handleChange = (e) => {
     e.preventDefault()
@@ -28,7 +32,26 @@ export default function Forms() {
     e.preventDefault()
   }
 
+  const loadPest = (input) => {
+    let result = pests.filter(pest => pest.name === input)
+    console.log(input)
+    setPest(...result)
+  }
 
+  const findPest = (e) => {
+    setQuery(e.target.value)
+    e.preventDefault()
+  }
+
+  let pestName = pests.map(pest => pest.name)
+
+  useEffect(() => {
+    const results = pestName.filter(pest => pest.includes(query)
+    );
+    setQueryResults(results)
+  }, [query])
+
+    // console.log(pest)
   return (
     <form>
       <label>
@@ -48,10 +71,13 @@ export default function Forms() {
           type="text"
           name="pest"
           value={formData.pest}
-          onChange={handleSearch}
+          onChange={findPest}
         />
+        {query.length === 0 ? " " : queryResults.map(item => 
+          <p>{item}</p>
+          )}
         <br />
-      <button onClick ={handleSubmit}>Submit</button>
+        <button onClick={loadPest}>Submit</button>
       </label>
     </form>
   )
