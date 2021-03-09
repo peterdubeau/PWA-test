@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import pests from '../../pests.json'
+import './Forms.css'
 
 export default function Forms() {
+
   const [formData, setFormData] = useState({
     clientFirstName: '',
     clientLastName: '',
@@ -83,13 +85,14 @@ export default function Forms() {
       </label>
     </form>
 
-    <div className="pest-info">
-      {pest === "" ? "" : <>
-        <p>Name: {pest.name}</p>
+    <div className="pest-info-container">
+      {pest === "" ? "" : <div className="pest-info">
+        <p style={{ textAlign: "center" }}>{pest.name}</p>
+        <img src={pest.imageUrl} className="pest-image"/>
         <p>Size: {pest.size}</p>
         <p>Hit Dice: {pest.hitDice}</p>
         <p>Notes: {pest.notes}</p>
-        </>}
+        </div>}
     </div>
   </>)
 }

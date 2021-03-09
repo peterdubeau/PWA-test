@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <div className="home-container">
       <img src={logo} alt='logo' className="logo"/>
-      <h2><Link to='/forms'>Forms</Link></h2>
-      <h2><Link to='/another-page'>Another Page</Link></h2>
+      <h2 className="home-menu-options"><Link className="links" to='/forms'>Forms</Link></h2>
+      <h2 className="home-menu-options"><Link className="links" to='/another-page'>Another Page</Link></h2>
     </div>
   )
 }

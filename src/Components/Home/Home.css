@@ -1,8 +1,22 @@
+body{
+  background-color: lightgray;
+}
+
+a.links:link, a.links:visited, a.links:hover, a.links:active {
+  text-decoration: none;
+  color: black;
+}
+
+
 .home-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.home-menu-options{
+  font-size: 40px;
 }
 
 .logo{
