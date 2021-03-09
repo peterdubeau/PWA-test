@@ -19,22 +19,22 @@ export default function Forms() {
     e.preventDefault()
     const { name, value } = e.currentTarget;
     setFormData({ ...formData, [name]: value })
+    console.log(queryResults)
   }
 
-  const handleSearch = (e) => {
-    const { name, value } = e.currentTarget;
-    setFormData({ ...formData, [name]: value })
-    return pests.find(item => pests.name === item)
+  // const handleSearch = (e) => {
+  //   const { name, value } = e.currentTarget;
+  //   setFormData({ ...formData, [name]: value })
+  //   return pests.find(item => pests.name === item)
     
-  }
+  // }
 
   const handleSubmit = (e) => {
     e.preventDefault()
   }
 
-  const loadPest = (input) => {
+  const loadPest = (input) => (e) => {
     let result = pests.filter(pest => pest.name === input)
-    console.log(input)
     setPest(...result)
   }
 
@@ -46,13 +46,15 @@ export default function Forms() {
   let pestName = pests.map(pest => pest.name)
 
   useEffect(() => {
-    const results = pestName.filter(pest => pest.includes(query)
+    const results = pestName.filter(pest =>
+      pest.toLowerCase().includes(query.toLowerCase())
     );
     setQueryResults(results)
   }, [query])
 
-    // console.log(pest)
-  return (
+  console.log(pest)
+
+  return (<>
     <form>
       <label>
         <p>First Name:</p><input
@@ -74,11 +76,20 @@ export default function Forms() {
           onChange={findPest}
         />
         {query.length === 0 ? " " : queryResults.map(item => 
-          <p>{item}</p>
+          <p onClick={loadPest(item)}>{item}</p>
           )}
         <br />
-        <button onClick={loadPest}>Submit</button>
+        <button>Submit</button>
       </label>
     </form>
-  )
+
+    <div className="pest-info">
+      {pest === "" ? "" : <>
+        <p>Name: {pest.name}</p>
+        <p>Size: {pest.size}</p>
+        <p>Hit Dice: {pest.hitDice}</p>
+        <p>Notes: {pest.notes}</p>
+        </>}
+    </div>
+  </>)
 }
