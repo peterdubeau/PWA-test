@@ -1,0 +1,14 @@
+img.pest-image{
+  height: 300px;
+  margin: auto;
+  justify-self: center;
+}
+
+.pest-info{
+  border: 2px solid black;
+  max-width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}

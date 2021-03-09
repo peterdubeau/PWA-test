@@ -3,25 +3,25 @@
     "name": "Mouse",
     "size": "tiny",
     "hitDice": "1d6",
-    "imageUrl": "",
+    "imageUrl": "https://res.cloudinary.com/dyrvlnond/image/upload/v1598306249/Rookies%20and%20Dragons/Real%20Pics/fighter_bx1ans.png",
     "notes": "A common mouse. Not really a big deal"
   },{
     "name": "Termite",
     "size": "Super Tiny",
     "hitDice": "1d1",
-    "imageUrl": "",
+    "imageUrl": "https://res.cloudinary.com/dyrvlnond/image/upload/v1598306249/Rookies%20and%20Dragons/Real%20Pics/Wiz_og7pal.png",
     "notes": "They're small, but where there's one there's usually a LOT more. Beware of warms"
   },{
     "name": "Cockroach",
     "size": "Super Tiny",
     "hitDice": "1d2",
-    "imageUrl": "",
+    "imageUrl": "https://res.cloudinary.com/dyrvlnond/image/upload/v1598306249/Rookies%20and%20Dragons/Real%20Pics/bard_fb2ynd.png",
     "notes": "Nukes Ineffective"
   },{
-    "name": "BugBear",
+    "name": "Owlbear",
     "size": "Large",
     "hitDice": "3d8",
-    "imageUrl": "",
+    "imageUrl": "https://res.cloudinary.com/dyrvlnond/image/upload/v1598306249/Rookies%20and%20Dragons/Real%20Pics/pali_d8aqhy.png",
     "notes": "What the hell, get the fuck out"
   }
 ]
