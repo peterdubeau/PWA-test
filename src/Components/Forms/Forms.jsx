@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import pests from '../../pests.json'
+import pests from '../../pests'
 import './Forms.css'
 
 export default function Forms() {
