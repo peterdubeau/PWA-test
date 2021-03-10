@@ -2,6 +2,7 @@ import mouse from './Assets/Mouse.png'
 import owlbear from './Assets/Owlbear.png'
 import termite from './Assets/Termite.png'
 import cockroach from './Assets/cockroach.png'
+import bedBug from './Assets/bedBug.png'
 
 const pests = [
   {
@@ -28,6 +29,12 @@ const pests = [
     "hitDice": "3d8",
     "imageUrl": owlbear,
     "notes": "What the hell, get the fuck out"
+  },{
+    "name": "Bed Bug",
+    "size": "Tiny",
+    "hitDice": "1d1",
+    "imageUrl": bedBug,
+    "notes": "Bugs that are in your bed"
   }
 ]
 

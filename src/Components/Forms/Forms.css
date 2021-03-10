@@ -1,7 +1,21 @@
+input{
+  margin: 10px auto;
+}
+
 img.pest-image{
-  height: 300px;
+  max-height: 300px;
   margin: auto;
   justify-self: center;
+  max-width: 80%;
+}
+
+.input-fields{
+  display: flex;
+  flex-direction: column;;
+}
+
+.logo{
+  margin-bottom: 0;
 }
 
 .pest-info{
@@ -11,4 +25,17 @@ img.pest-image{
   margin-top: 30px;
   display: flex;
   flex-direction: column;
+}
+
+.pest-results{
+  border: 2px solid grey;
+  background-color: white;
+  margin: 3px 0;
+  width: 25%;
+}
+
+div.pest-results-container{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
