@@ -20,6 +20,6 @@
   ],
   "start_url": "/",
   "display": "minimal-ui",
-  "theme_color": "green",
-  "background_color": "red"
+  "theme_color": "rgb(13,54,105)",
+  "background_color": "rgb(243,245,240)"
 }
