@@ -21,8 +21,7 @@ img.pest-image{
 .pest-info{
   border: 2px solid black;
   max-width: 80%;
-  margin: auto;
-  margin-top: 30px;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
 }
