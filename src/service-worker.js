@@ -61,23 +61,6 @@ registerRoute(
   })
 );
 
-window.addEventListener('activate', function(event) {
-  event.waitUntil(
-      caches.keys().then(function(cacheNames) {
-          return Promise.all(
-            cacheNames.filter(function (cacheName) {
-                return true
-                  // Return true if you want to remove this cache,
-                  // but remember that caches are shared across
-                  // the whole origin
-              }).map(function(cacheName) {
-                  return caches.delete(cacheName);
-              })
-          );
-      })
-  );
-});
-
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
 self.addEventListener('message', (event) => {
