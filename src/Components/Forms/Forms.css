@@ -26,8 +26,9 @@ img.pest-image{
 
 .form-container{
   display: flex;
-  flex-direction: row;
-  align-items: space-between;
+  flex-direction: column;
+  justify-content: center;
+  /* padding: 20px; */
 }
 
 .form-logo{
@@ -38,7 +39,7 @@ img.pest-image{
 .pest-info{
   border: 2px solid black;
   max-width: 70%;
-  margin-top: 30px;
+  margin: 30px;
   display: flex;
   flex-direction: column;
 }
