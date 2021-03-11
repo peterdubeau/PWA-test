@@ -46,9 +46,10 @@ export default function Forms() {
     setQueryResults(results)
   }, [query])
 
-  return (<div style={{ display: "flex", flexDirection: "column"}}>
-    <img src={logo} alt="logo" className="logo"/>
-    <form key="form">
+  return (<>
+    <img src={logo} alt="logo" className="form-logo"/>
+    <div className="form-container">
+      <form key="form" className="customer-form">
       <label key="form-data">
         <p>First Name:
           <input
@@ -105,9 +106,11 @@ export default function Forms() {
             <img src={pest.imageUrl} className="pest-image" alt={pest.name} key="pest-image"/>
             <p key="size">Size: {pest.size}</p>
             <p key="hd">Hit Dice: {pest.hitDice}</p>
-            <p key="notes">Notes: {pest.notes}</p>
+              <p key="notes">Notes: {pest.notes}</p>
+              <p key="additional-notes" className="additional-notes">Additional Notes: {pest.additionalNotes}</p>
           </div>
       }
     </div>
-  </div>)
+    </div>
+  </>)
 }
