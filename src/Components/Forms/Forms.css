@@ -2,6 +2,16 @@ input{
   margin: 10px auto;
 }
 
+.additional-notes{
+  overflow: scroll;
+  height: 200px;
+}
+
+.customer-form{
+  margin: 20px;
+  margin-right: 10%;
+}
+
 img.pest-image{
   max-height: 300px;
   margin: auto;
@@ -14,18 +24,30 @@ img.pest-image{
   flex-direction: column;;
 }
 
-.logo{
+.form-container{
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+}
+
+.form-logo{
   margin-bottom: 0;
+  width: 300px;
 }
 
 .pest-info{
   border: 2px solid black;
-  max-width: 80%;
-  margin: auto;
+  max-width: 70%;
   margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
+
+.pest-info-container{
+  justify-content: right;
+}
+
+
 
 .pest-results{
   border: 2px solid grey;
@@ -35,7 +57,5 @@ img.pest-image{
 }
 
 div.pest-results-container{
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
+  justify-self: right;
 }
